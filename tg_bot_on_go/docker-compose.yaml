@@ -1,0 +1,10 @@
+services:
+  duty-bot:
+    image: devops-duty-bot:latest
+    container_name: duty-bot-container
+    restart: unless-stopped
+    env_file:
+      - .env
+    # Монтируем папку целиком. Теперь любые изменения файлов внутри мгновенно синхронизируются
+    volumes:
+      - ./data:/root/data

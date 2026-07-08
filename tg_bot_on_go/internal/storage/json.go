@@ -12,7 +12,7 @@ type Schedule struct {
 }
 
 // Файл будет лежать в корне проекта, откуда запускается бот
-const filename = "schedule.json"
+const filename = "data/schedule.json"
 
 // SaveSchedule сохраняет мапу дежурных в JSON-файл
 func SaveSchedule(duties map[string]string) error {
